@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="employee">
+
+    <nav class="navbar">
+        <h2>SmartLeave</h2>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+    <main class="dashboard">
+        <h1>Employee Dashboard</h1>
+        <p>Welcome, <strong id="employeeName">Employee</strong>!</p>
+
+        <section>
+            <h2>My Leave Balances</h2>
+            <div id="balanceContainer" class="balance-grid">
+                Loading balances...
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Apply for Leave</h2>
+
+            <form id="leaveForm">
+                <label>Leave Type</label>
+                <select id="leaveType" required>
+                    <option value="">Select Leave Type</option>
+                </select>
+
+                <label>Start Date</label>
+                <input type="date" id="startDate" required>
+
+                <label>End Date</label>
+                <input type="date" id="endDate" required>
+
+                <label>Reason</label>
+                <textarea id="leaveReason"
+                    placeholder="Enter reason for leave"
+                    rows="4" required></textarea>
+
+                <button type="submit" class="btn">
+                    Submit Leave Request
+                </button>
+            </form>
+
+            <p id="leaveMessage" class="message"></p>
+        </section>
+
+        <section class="panel">
+            <h2>My Leave History</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Leave Type</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myRequests">
+                        <tr>
+                            <td colspan="5">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

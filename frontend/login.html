@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SmartLeave</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="login">
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Welcome Back!</h1>
+            <p>Login to your SmartLeave account</p>
+
+            <form id="loginForm">
+                <label>Email Address</label>
+                <input type="email" id="loginEmail"
+                    placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" id="loginPassword"
+                    placeholder="Enter password" required>
+
+                <button type="submit" class="btn full">
+                    Login
+                </button>
+            </form>
+
+            <p id="loginMessage" class="message"></p>
+
+            <p class="auth-link">
+                Don't have an account?
+                <a href="register.html">Register here</a>
+            </p>
+
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

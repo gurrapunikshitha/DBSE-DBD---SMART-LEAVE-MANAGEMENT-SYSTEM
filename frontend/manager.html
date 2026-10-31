@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLeave | Manager Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="manager">
+
+<div class="manager-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="manager-sidebar">
+
+        <h2>Smart<span>Leave</span></h2>
+
+        <p class="sidebar-label">MAIN MENU</p>
+
+        <nav>
+            <a href="#dashboard" class="active">Dashboard</a>
+            <a href="#requests">Leave Requests</a>
+            <a href="#history">Approval History</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="manager-main">
+
+        <!-- HEADER -->
+        <header class="manager-header">
+
+            <div>
+                <h1>Manager Dashboard</h1>
+                <p>Welcome to SmartLeave Management System</p>
+            </div>
+
+            <div class="manager-profile">
+                <div class="profile-icon">M</div>
+                <span id="managerName">Manager</span>
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="manager-welcome">
+                <h2>Welcome Back!</h2>
+                <p>Manage employee leave applications easily.</p>
+            </div>
+
+
+            <!-- STATISTICS -->
+            <div class="manager-stats">
+
+                <div class="stat-card">
+                    <p>Total Requests</p>
+                    <h2 id="totalRequests">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Pending Requests</p>
+                    <h2 id="pendingRequests">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Approved Requests</p>
+                    <h2 id="approvedRequests">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Rejected Requests</p>
+                    <h2 id="rejectedRequests">0</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEAVE REQUESTS -->
+        <section id="requests" class="manager-section">
+
+            <h2>Employee Leave Requests</h2>
+
+            <p>Review employee leave applications and take action.</p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>From Date</th>
+                            <th>To Date</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="managerRequests">
+
+                        <tr>
+                            <td colspan="7">Loading leave requests...</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- APPROVAL HISTORY -->
+        <section id="history" class="manager-section">
+
+            <h2>Approval History</h2>
+
+            <p>View previously approved and rejected requests.</p>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Employee</th>
+                            <th>Leave Type</th>
+                            <th>From Date</th>
+                            <th>To Date</th>
+                            <th>Status</th>
+                            <th>Comments</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="managerHistory">
+
+                        <tr>
+                            <td colspan="6">Loading approval history...</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
